@@ -1,0 +1,23 @@
+<html>
+<head>
+     <!-- <link rel="stylesheet" type="text/css" href="static/css/walls.css"> -->
+    <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    </head>
+    <body>
+        <a href="/bright_ideas">Bright Ideas</a> <a href="/logout">Logout</a>
+        <h1>{{profile_info['profile']['name']}}'s Profile</h1>
+        <p>Name:{{profile_info['profile']['name']}}</p>
+        <p>Alias:{{profile_info['profile']['alias']}}</p>
+        <p>Email:{{profile_info['profile']['email']}}</p>
+        <hr>
+        <p>Total Number of Posts:{{profile_info['posts']['count']}}</p>
+        <p>Total Number of Likes:{{profile_info['likes']['count']}}</p>
+    </body>
+</html>

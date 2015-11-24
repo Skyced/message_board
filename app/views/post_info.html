@@ -1,0 +1,40 @@
+<html>
+<head>
+     <!-- <link rel="stylesheet" type="text/css" href="static/css/walls.css"> -->
+    <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    </head>
+    <body>
+        <a href="/bright_ideas">Bright Ideas</a> <a href="/logout">Log Out</a>
+        <div class='col-md-8 col-md-offset-2'>
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h3 class="panel-title"><a href="/profile/{{post_info['post']['id']}}">{{post_info['post']['alias']}}</a> says:</h3>
+          </div>
+        <div class="panel-body">
+
+            {{post_info['post']['message']}}
+          
+        </div>
+    </div>
+        <h3>People who liked this post:</h3>
+        <table class="table table-striped">
+            <tr>
+                <th>Alias</th>
+                <th>Name</th>
+            </tr>
+            {% for users in post_info['likes'] %}
+            <tr>
+                <td><a href="/profile/{{users['id']}}">{{users['alias']}}</a></td>
+                <td>{{users['name']}}</td>
+            </tr>
+            {% endfor %}
+        </table>
+    </body>
+</html>
